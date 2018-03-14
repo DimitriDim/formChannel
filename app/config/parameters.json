@@ -1,0 +1,11 @@
+{
+
+    "database_driver": "mysql",
+    "database_host": "localhost",
+    "database_port": "",
+    "database_name": "formation-php",
+    "database_user": "root",
+    "database_password": "",
+	"charset": "UTF8"
+
+}

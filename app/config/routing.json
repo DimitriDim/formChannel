@@ -1,0 +1,65 @@
+{
+
+	"index":{
+	
+		"path":"/formation-php/web/index",
+		"controller": "\\App\\Controller\\Index::index"
+	},
+	
+	"hello":{
+	
+		"path":"/formation-php/web/hello",
+		"controller": "\\App\\Controller\\Hello::say"
+	
+	},
+	
+	"helloWho":{
+	
+	"path":"/formation-php/web/hello/Who",
+	"controller": "\\App\\Controller\\Hello::sayTo"
+	
+	},
+	
+	"signup":{
+	
+	"path":"/formation-php/web/signup",
+	"controller": "\\App\\Controller\\SignUp::signup"
+	
+	},
+	
+	"signin":{
+	
+	"path":"/formation-php/web/signin",
+	"controller": "\\App\\Controller\\SignIn::signin"
+	
+	},
+	
+	"home":{
+	
+	"path":"/formation-php/web/home",
+	"controller": "\\App\\Controller\\Home::home"
+	
+	},
+	
+	"signout":{
+	
+	"path":"/formation-php/web/signout",
+	"controller": "\\App\\Controller\\signOut::signout"
+	
+	},
+	
+	"channel":{
+	
+	"path":"/formation-php/web/channel",
+	"controller": "\\App\\Controller\\Channel::channel"
+	
+	},
+	
+	"channelApi":{
+	
+	"path":"/formation-php/web/api/channel",
+	"controller": "\\App\\Controller\\Api\\Channel::channel"
+	
+	}
+	
+}
