@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Client</h1>
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest;
+		xhr.open("POST", "/formation-php/web/api/channel?channel=96");//ajout autorisation json
+		xhr.setRequestHeader('Accept', 'application/json'); //ajout autorisation json
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); // toujours dans le cas d'utilisation d'un POST
+		xhr.send("message=ceci est mon message du tchat");	 //on ajoute un argument à send lors d'un POST!
+	</script>
+
+</body>
+</html>

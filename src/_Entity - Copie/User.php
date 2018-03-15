@@ -13,15 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 class User
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="user_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $userId;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="user_pswd", type="string", length=255, nullable=false)
@@ -36,9 +27,18 @@ class User
     private $userEmail;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="user_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $userId;
+
+    /**
      * @var \App\Entity\Role
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Role",cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="\App\Entity\Role", cascade={"persist", "remove"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="user_role", referencedColumnName="role_id")
      * })
@@ -48,7 +48,7 @@ class User
     /**
      * @var \App\Entity\Profile
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Profile",cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="\App\Entity\Profile", cascade={"persist", "remove"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="user_profile", referencedColumnName="profile_id")
      * })
@@ -58,17 +58,7 @@ class User
 
 
     /**
-     * Get userId.
-     *
-     * @return int
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * Set userPswd.
+     * Set userPswd
      *
      * @param string $userPswd
      *
@@ -82,7 +72,7 @@ class User
     }
 
     /**
-     * Get userPswd.
+     * Get userPswd
      *
      * @return string
      */
@@ -92,7 +82,7 @@ class User
     }
 
     /**
-     * Set userEmail.
+     * Set userEmail
      *
      * @param string $userEmail
      *
@@ -106,7 +96,7 @@ class User
     }
 
     /**
-     * Get userEmail.
+     * Get userEmail
      *
      * @return string
      */
@@ -116,9 +106,19 @@ class User
     }
 
     /**
-     * Set userRole.
+     * Get userId
      *
-     * @param \App\Entity\Role|null $userRole
+     * @return integer
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * Set userRole
+     *
+     * @param \App\Entity\Role $userRole
      *
      * @return User
      */
@@ -130,9 +130,9 @@ class User
     }
 
     /**
-     * Get userRole.
+     * Get userRole
      *
-     * @return \App\Entity\Role|null
+     * @return \App\Entity\Role
      */
     public function getUserRole()
     {
@@ -140,9 +140,9 @@ class User
     }
 
     /**
-     * Set userProfile.
+     * Set userProfile
      *
-     * @param \App\Entity\Profile|null $userProfile
+     * @param \App\Entity\Profile $userProfile
      *
      * @return User
      */
@@ -154,9 +154,9 @@ class User
     }
 
     /**
-     * Get userProfile.
+     * Get userProfile
      *
-     * @return \App\Entity\Profile|null
+     * @return \App\Entity\Profile
      */
     public function getUserProfile()
     {

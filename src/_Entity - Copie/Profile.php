@@ -13,55 +13,45 @@ use Doctrine\ORM\Mapping as ORM;
 class Profile
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="profile_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $profileId;
-
-    /**
-     * @var string|null
+     * @var string
      *
      * @ORM\Column(name="profile_firstname", type="string", length=255, nullable=true)
      */
     private $profileFirstname;
 
     /**
-     * @var string|null
+     * @var string
      *
      * @ORM\Column(name="profile_name", type="string", length=255, nullable=true)
      */
     private $profileName;
 
     /**
-     * @var string|null
+     * @var string
      *
      * @ORM\Column(name="profile_avatar", type="string", length=255, nullable=true)
      */
     private $profileAvatar;
 
-
-
     /**
-     * Get profileId.
+     * @var integer
      *
-     * @return int
+     * @ORM\Column(name="profile_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public function getProfileId()
-    {
-        return $this->profileId;
-    }
+    private $profileId;
+
+
 
     /**
-     * Set profileFirstname.
+     * Set profileFirstname
      *
-     * @param string|null $profileFirstname
+     * @param string $profileFirstname
      *
      * @return Profile
      */
-    public function setProfileFirstname($profileFirstname = null)
+    public function setProfileFirstname($profileFirstname)
     {
         $this->profileFirstname = $profileFirstname;
     
@@ -69,9 +59,9 @@ class Profile
     }
 
     /**
-     * Get profileFirstname.
+     * Get profileFirstname
      *
-     * @return string|null
+     * @return string
      */
     public function getProfileFirstname()
     {
@@ -79,13 +69,13 @@ class Profile
     }
 
     /**
-     * Set profileName.
+     * Set profileName
      *
-     * @param string|null $profileName
+     * @param string $profileName
      *
      * @return Profile
      */
-    public function setProfileName($profileName = null)
+    public function setProfileName($profileName)
     {
         $this->profileName = $profileName;
     
@@ -93,9 +83,9 @@ class Profile
     }
 
     /**
-     * Get profileName.
+     * Get profileName
      *
-     * @return string|null
+     * @return string
      */
     public function getProfileName()
     {
@@ -103,13 +93,13 @@ class Profile
     }
 
     /**
-     * Set profileAvatar.
+     * Set profileAvatar
      *
-     * @param string|null $profileAvatar
+     * @param string $profileAvatar
      *
      * @return Profile
      */
-    public function setProfileAvatar($profileAvatar = null)
+    public function setProfileAvatar($profileAvatar)
     {
         $this->profileAvatar = $profileAvatar;
     
@@ -117,12 +107,22 @@ class Profile
     }
 
     /**
-     * Get profileAvatar.
+     * Get profileAvatar
      *
-     * @return string|null
+     * @return string
      */
     public function getProfileAvatar()
     {
         return $this->profileAvatar;
+    }
+
+    /**
+     * Get profileId
+     *
+     * @return integer
+     */
+    public function getProfileId()
+    {
+        return $this->profileId;
     }
 }

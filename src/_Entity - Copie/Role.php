@@ -13,35 +13,25 @@ use Doctrine\ORM\Mapping as ORM;
 class Role
 {
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="role_id", type="integer", nullable=false)
+     * @ORM\Column(name="role_name", type="string", length=10, nullable=false)
+     */
+    private $roleName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="role_id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $roleId;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="role_name", type="string", length=10, nullable=false, options={"fixed"=true})
-     */
-    private $roleName;
-
 
 
     /**
-     * Get roleId.
-     *
-     * @return int
-     */
-    public function getRoleId()
-    {
-        return $this->roleId;
-    }
-
-    /**
-     * Set roleName.
+     * Set roleName
      *
      * @param string $roleName
      *
@@ -55,12 +45,22 @@ class Role
     }
 
     /**
-     * Get roleName.
+     * Get roleName
      *
      * @return string
      */
     public function getRoleName()
     {
         return $this->roleName;
+    }
+
+    /**
+     * Get roleId
+     *
+     * @return integer
+     */
+    public function getRoleId()
+    {
+        return $this->roleId;
     }
 }

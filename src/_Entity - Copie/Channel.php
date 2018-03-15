@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Channel
  *
- * @ORM\Table(name="channel", uniqueConstraints={@ORM\UniqueConstraint(name="channel_name", columns={"channel_name", "profile_id"})}, indexes={@ORM\Index(name="profile_id", columns={"profile_id"})})
+ * @ORM\Table(name="channel", indexes={@ORM\Index(name="profile_id", columns={"profile_id"})})
  * @ORM\Entity
  */
 class Channel
 {
     /**
-     * @var int
+     * @var integer
      *
      * @ORM\Column(name="channel_id", type="integer", nullable=false)
      * @ORM\Id
@@ -36,7 +36,7 @@ class Channel
     private $channelDescr;
 
     /**
-     * @var int
+     * @var integer
      *
      * @ORM\Column(name="channel_capacity", type="integer", nullable=false)
      */
@@ -55,9 +55,9 @@ class Channel
 
 
     /**
-     * Get channelId.
+     * Get channelId
      *
-     * @return int
+     * @return integer
      */
     public function getChannelId()
     {
@@ -65,7 +65,7 @@ class Channel
     }
 
     /**
-     * Set channelName.
+     * Set channelName
      *
      * @param string $channelName
      *
@@ -79,7 +79,7 @@ class Channel
     }
 
     /**
-     * Get channelName.
+     * Get channelName
      *
      * @return string
      */
@@ -89,7 +89,7 @@ class Channel
     }
 
     /**
-     * Set channelDescr.
+     * Set channelDescr
      *
      * @param string $channelDescr
      *
@@ -103,7 +103,7 @@ class Channel
     }
 
     /**
-     * Get channelDescr.
+     * Get channelDescr
      *
      * @return string
      */
@@ -113,9 +113,9 @@ class Channel
     }
 
     /**
-     * Set channelCapacity.
+     * Set channelCapacity
      *
-     * @param int $channelCapacity
+     * @param integer $channelCapacity
      *
      * @return Channel
      */
@@ -127,9 +127,9 @@ class Channel
     }
 
     /**
-     * Get channelCapacity.
+     * Get channelCapacity
      *
-     * @return int
+     * @return integer
      */
     public function getChannelCapacity()
     {
@@ -137,9 +137,9 @@ class Channel
     }
 
     /**
-     * Set profile.
+     * Set profile
      *
-     * @param \App\Entity\Profile|null $profile
+     * @param \App\Entity\Profile $profile
      *
      * @return Channel
      */
@@ -151,9 +151,9 @@ class Channel
     }
 
     /**
-     * Get profile.
+     * Get profile
      *
-     * @return \App\Entity\Profile|null
+     * @return \App\Entity\Profile
      */
     public function getProfile()
     {

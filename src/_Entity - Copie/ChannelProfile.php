@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * ChannelProfile
  *
- * @ORM\Table(name="channel_profile", uniqueConstraints={@ORM\UniqueConstraint(name="channel_id_2", columns={"channel_id", "profile_id"})}, indexes={@ORM\Index(name="channel_id", columns={"channel_id"}), @ORM\Index(name="profile_id", columns={"profile_id"})})
+ * @ORM\Table(name="channel_profile", indexes={@ORM\Index(name="channel_id", columns={"channel_id"}), @ORM\Index(name="profile_id", columns={"profile_id"})})
  * @ORM\Entity
  */
 class ChannelProfile
 {
     /**
-     * @var int
+     * @var integer
      *
      * @ORM\Column(name="channel_profile_id", type="integer", nullable=false)
      * @ORM\Id
@@ -44,9 +44,9 @@ class ChannelProfile
 
 
     /**
-     * Get channelProfileId.
+     * Get channelProfileId
      *
-     * @return int
+     * @return integer
      */
     public function getChannelProfileId()
     {
@@ -54,9 +54,9 @@ class ChannelProfile
     }
 
     /**
-     * Set channel.
+     * Set channel
      *
-     * @param \App\Entity\Channel|null $channel
+     * @param \App\Entity\Channel $channel
      *
      * @return ChannelProfile
      */
@@ -68,9 +68,9 @@ class ChannelProfile
     }
 
     /**
-     * Get channel.
+     * Get channel
      *
-     * @return \App\Entity\Channel|null
+     * @return \App\Entity\Channel
      */
     public function getChannel()
     {
@@ -78,9 +78,9 @@ class ChannelProfile
     }
 
     /**
-     * Set profile.
+     * Set profile
      *
-     * @param \App\Entity\Profile|null $profile
+     * @param \App\Entity\Profile $profile
      *
      * @return ChannelProfile
      */
@@ -92,9 +92,9 @@ class ChannelProfile
     }
 
     /**
-     * Get profile.
+     * Get profile
      *
-     * @return \App\Entity\Profile|null
+     * @return \App\Entity\Profile
      */
     public function getProfile()
     {
